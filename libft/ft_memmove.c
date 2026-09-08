@@ -5,17 +5,3 @@
 *the memory regions thats the source, -n: the number of bytes to copy 
 *@return:the destination memory region once its coppied src
 */
-void    *memcpy(void *dest, const void *src, size_t n)
-{
-    int i;
-    
-    if (!dest || !src || n < 0)
-        return (NULL);
-    i = 0;
-    while(i < n)
-    {
-        (char *)dest[i] = (char *)src[i];
-        i++;
-    }
-    return (dest);
-}

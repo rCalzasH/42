@@ -1,3 +1,4 @@
+#include "libft.h"
 /*
 *@brief: this counts the number of characters in a string
 *@param: the string to count over 

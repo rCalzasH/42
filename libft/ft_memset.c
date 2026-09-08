@@ -1,3 +1,4 @@
+#include "libft.h"
 /*
 *@brief: Sets a number of byste of memory given with a constant type 
 *@param: the memory to chancge, allocated in mem, the const type in
@@ -7,12 +8,12 @@
 void *ft_memset(void *mem, int x, size_t n)
 {
     int i;
-    if(!mem)
+    if(!mem || n < 0)
         return (NULL);
     i = 0;
     while(mem[i] && i < n)
     {
-        mem[i] = x;
+        (char *)mem[i] = (char *)x;
         i++;
     }
     return (mem);

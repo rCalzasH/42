@@ -1,3 +1,4 @@
+#include "libft.h"
 /*
 *@brief: this function checks ehter a charcter is a number or not
 *@param: the character to check

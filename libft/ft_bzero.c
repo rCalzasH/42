@@ -4,10 +4,10 @@
 *@param: the memory region and the tsize given by n
 *@return: the memory region once n bytes are set to /0
 */
-void *ft_bzero(void *mem, size_t)
+void *ft_bzero(void *mem, size_t n)
 {
     size_t i;
-    if(!mem)
+    if(!mem || n < 0)
         return (NULL);
     i = 0;
     while(i < n)

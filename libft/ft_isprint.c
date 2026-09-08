@@ -1,3 +1,4 @@
+#include "libft.h"
 /*
 *@brief: this function checks ehter a charcter is printable
 *@param: the character to check

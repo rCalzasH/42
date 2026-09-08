@@ -1,3 +1,4 @@
+#include "libft.h"
 /*
 *@briet: this function checks ehter a charcter belongs to or not ascii table
 *@param: the character to check
