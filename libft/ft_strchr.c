@@ -15,5 +15,5 @@ char *strchr(const char *s, int c)
             i++;
     if(!s[i])
         return (NULL);
-    return (s[i]);
+    return (&s[i]);
 }
