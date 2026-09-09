@@ -12,6 +12,6 @@ void *calloc(size_t n, size_t size)
     res = malloc(n * size);
     if(!res)
         return (NULL);
-    ft_memset(0);
+    ft_memset(res, 0);
     return res;
 }

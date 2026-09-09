@@ -6,7 +6,7 @@
 */
 char *strrchr(char *s, char c)
 {
-    if(!s)
+    if(!s || !c)
         return (NULL);
     
     int i;
