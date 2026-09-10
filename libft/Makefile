@@ -6,17 +6,17 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror 
 
 #src files and objecfiles
-SRC = ft_bzero.c \ 
+SRC = ft_bzero.c \
 	  ft_isalpha.c \
-	  ft_isalum.c \ 
+	  ft_isalum.c \
 	  ft_isascii.c \
 	  ft_isdigit.c \
 	  ft_isprint.c \
-	  ft_memchr.c \ 
-	  ft_memcpy.c \ 
-	  ft_memset.c \ 
-	  ft_strchr.c \ 
-	  ft_strlcat.c \ 
+	  ft_memchr.c \
+	  ft_memcpy.c \
+	  ft_memset.c \
+	  ft_strchr.c \
+	  ft_strlcat.c \
 	  ft_strlcpy.c \
 	  ft_strlen.c \
 	  ft_strncmp.c \
@@ -26,7 +26,7 @@ SRC = ft_bzero.c \
 	  ft_strdup.c \
 	  ft_calloc.c \
 
-OBJ = $(SRC:c:=.o) 
+OBJ = $(SRC:.c:=.o) 
 
 #header
 INCLUDE = libft.h
