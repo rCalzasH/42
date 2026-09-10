@@ -13,8 +13,8 @@ int ft_strncmp(char *s1, char *s2, size_t n)
         return -1;
 
     i = 0;
-    cmp = 0
-    while(i < n && (s1[i]|| s2[i]) && !cmp)
+    cmp = 0;
+    while(i < n && !cmp)
     {
         cmp = (unsigned char)s1[i] - (unsigned char)s2[i];
         i++;

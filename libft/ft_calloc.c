@@ -5,13 +5,12 @@
 *@return:a pointer to the new memory region allocated after being cleaned 
 *or NULL in case of invalid params or malloc failure
 */
-void *calloc(size_t n, size_t size)
+void *ft_calloc(size_t n, size_t size)
 {
-    if(n <= 0 || size <= 0)
     void *res;
     res = malloc(n * size);
     if(!res)
         return (NULL);
-    ft_memset(res, 0);
+    ft_memset(res, 0,n*size);
     return res;
 }

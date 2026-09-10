@@ -4,7 +4,7 @@
 *@param: the character to check
 *@return: 1 if the character is in the asci table or not or 0 if else
 */
-int ft_isascii(char c)
+int ft_isascii(int c)
 {
     return (c >= 0 && c <= 127 );
 }

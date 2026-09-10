@@ -9,15 +9,19 @@ int memcmp(const void *s1, const void *s2, size_t n)
 {
     int cmp;
     size_t i;
-    if(!s1 || !s2)
-        return -1;
+    char *str1;
+    char *str2;
 
+    cmp = 0;
     i = 0;
-    cmp = 0
+    str1 = (char *)s1;
+    str2 = (char *)s2;
     while(i < n && !cmp)
     {
-        cmp = (unsigned char)s1[i] - (unsigned char)s2[i];
+        cmp = (unsigned char)*str1 - (unsigned char)*str2;
         i++;
+        str1++;
+        str2++;
     }
     return cmp;
 }

@@ -6,19 +6,21 @@
 */
 void *memchr(const void *s, int c, size_t n)
 {
-    int i;
+    size_t i;
     int cmp;
+    void *aux;
     if (!s || !c)
         return (NULL);
     i = 0;
     cmp = 0;
     while(i < n && !cmp)
     {
-        cmp = (unsigned char)s[i] == (unsigned char)c;
+        cmp = *(unsigned char *)aux == (unsigned char)c;
         i++;
+        aux++;
     }
     if(cmp)
-        return (&s[i]);
+        return (aux);
     else
         return (NULL);
 }

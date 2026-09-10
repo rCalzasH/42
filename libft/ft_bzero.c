@@ -7,12 +7,12 @@
 void *ft_bzero(void *mem, size_t n)
 {
     size_t i;
-    if(!mem || n < 0)
+    if(!mem)
         return (NULL);
     i = 0;
     while(i < n)
     {
-        mem[] = '/0';
+        ((char *)mem)[i] = '0';
         i++;
     }
     return (mem);

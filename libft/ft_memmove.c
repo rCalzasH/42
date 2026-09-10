@@ -5,7 +5,7 @@
 *the memory regions thats the source, -n: the number of bytes to copy 
 *@return:the destination memory region once its coppied src, without overlap
 */
- void memmove(void *dest, void *src, int size)
+ void *ft_memmove(void *dest, void *src, int size)
 {
   if(!dest || !src)
     return (NULL);

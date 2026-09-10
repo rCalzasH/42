@@ -7,8 +7,6 @@
 */
 char *strdup(const char *s)
 {
-    if(!s)
-        return (NULL);
     int size;
     char *dup;
 

@@ -4,11 +4,11 @@
 *@param: the string to count over 
 *@return: the number of characters in str, or -1 if invalid param
 */
-int ft_strlen(char *str)
+size_t ft_strlen(char const *str)
 {
     if(!str)
         return (-1);
-    int i;
+    size_t  i;
 
     i = 0;
     while(str[i])

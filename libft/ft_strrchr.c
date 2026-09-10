@@ -4,23 +4,24 @@
 *@param: s is the string to search over and c is the char to look for
 *@return: a pointer to the last occurence or null if c wasnt found on s
 */
-char *strrchr(char *s, char c)
+char *ft_strrchr(char const *s, char c)
 {
     if(!s || !c)
         return (NULL);
     
-    int i;
+    char *aux;
     int cmp;
+    int i;
 
     cmp = 0;
-    i = = ft_strlen(s) - 1;
+    i = ft_strlen(s) - 1;
     while(i >= 0 && !cmp)
     {
-        cmp = (unsigned char)s[i] - (unsigned char)c;
-        i--
+        cmp = (unsigned char)*aux - (unsigned char)c;
+        aux++;
     }
     if(!cmp)
         return (NULL);
     else
-        return (&s[i]);
+        return (aux);
 }

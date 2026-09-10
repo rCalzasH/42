@@ -1,7 +1,7 @@
 #include "libft.h"
 static int ft_isspace(char c)
 {
-    return (c == '20' || (c >= 8 && c <= 13))
+    return (c == 20 || (c >= 8 && c <= 13));
 }
 /*
 *@brief: transforms an string into an int value, does not check for
@@ -16,24 +16,24 @@ int ft_atoi(char *number)
     int sign_count;
     int minus;
 
-    sign_count = 0:
+    sign_count = 0;
     nb = 0;
     minus = 1;
     if (!number)
         return nb;
-    while(ft_isspace(*s))
-        s++;
-    while((*s='+' || *s='-') && sign_count < 2)
+    while(ft_isspace(*number))
+        number++;
+    while((*number=='+' || *number=='-') && sign_count < 2)
     {
-        if(*s = '-')
+        if(*number == '-')
             minus*=-1;
         sign_count++;
-        s++;
+        number++;
     }
-    while(ft_isdigit(*s))
+    while(ft_isdigit(*number))
     {
-        nb = nb*10 + (*s-48);
-        s++;
+        nb = nb*10 + (*number-48);
+        number++;
     }
     return (nb);
 }

@@ -7,14 +7,14 @@
 */
 void    *memcpy(void *dest, const void *src, size_t n)
 {
-    int i;
+    size_t i;
     
-    if (!dest || !src || n < 0)
+    if (!dest || !src)
         return (NULL);
     i = 0;
     while(i < n)
     {
-        (char *)dest[i] = (char *)src[i];
+        ((char *)dest)[i] = ((char *)src)[i];
         i++;
     }
     return (dest);

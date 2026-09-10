@@ -7,13 +7,13 @@
 */
 void *ft_memset(void *mem, int x, size_t n)
 {
-    int i;
-    if(!mem || n < 0)
+    size_t i;
+    if(!mem)
         return (NULL);
     i = 0;
-    while(mem[i] && i < n)
+    while(((char *)mem)[i] && i < n)
     {
-        (char *)mem[i] = (char *)x;
+        ((char *)mem)[i] = (char )x;
         i++;
     }
     return (mem);
