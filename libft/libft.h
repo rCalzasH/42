@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 10:53:45 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/11 10:53:56 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/11 11:21:16 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ char *ft_strrchr(const char *s, char c);
 int ft_topupper(int param);
 int ft_topupper(int param);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
-
+char *ft_substr(char const *s, unsigned int start, size_t len);
+char *ft_strjoin(char const *s1, char const *s2);
+char *ft_strtrim(char const *s1, char const *set);
 
 #endif
