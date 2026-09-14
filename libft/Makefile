@@ -6,7 +6,7 @@
 #   By: rcalzas <rcalzas@student.42madrid.com>       +#+  +:+       +#+        #
 #                                                  +#+#+#+#+#+   +#+           #
 #   Created: 2026/09/11 10:53:49 by rcalzas             #+#    #+#             #
-#   Updated: 2026/09/14 18:05:18 by rcalzas            ###   ########.fr       #
+#   Updated: 2026/09/14 23:53:04 by rcalzas            ###   ########.fr       #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,8 @@ SRC = ft_atoi.c \
 	  ft_strtrim.c \
 	  ft_split.c \
 	  ft_itoa.c \
+	  ft_strmapi.c \
+	  ft_striteri.c \
 	  
 
 OBJ = $(SRC:.c=.o) 
