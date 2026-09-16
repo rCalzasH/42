@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/16 10:36:36 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/16 19:49:25 by rcalzas          ###   ########.fr       */
+/*   Created: 2026/09/16 19:53:16 by rcalzas           #+#    #+#             */
+/*   Updated: 2026/09/16 19:55:04 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-*@brief:returns the last node of the list
-*@param: the a pointer to the list which last node que want to obtain
-*@return: NULL if wrong params or the last node of lst
-*/
-t_list *ft_lstlast(t_list *lst)
+void ft_lstadd_back(t_list **lst, t_list *new)
 {
-	unsigned int	lst_s;
-	void			*cursor;
-	if (!lst)
-		return (NULL);
-	cursor = lst->next;
-	while(cursor)
-			cursor = lst->next;
-	return (cursor);
+	t_lst	*node;
+
+	node = ft_lstlast(*lst);
+	node->content = new;
+	return;
 }

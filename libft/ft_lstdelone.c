@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/16 10:36:36 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/16 19:49:25 by rcalzas          ###   ########.fr       */
+/*   Created: 2026/09/16 19:58:56 by rcalzas           #+#    #+#             */
+/*   Updated: 2026/09/16 20:01:15 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-*@brief:returns the last node of the list
-*@param: the a pointer to the list which last node que want to obtain
-*@return: NULL if wrong params or the last node of lst
-*/
-t_list *ft_lstlast(t_list *lst)
+
+void ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	unsigned int	lst_s;
-	void			*cursor;
-	if (!lst)
-		return (NULL);
-	cursor = lst->next;
-	while(cursor)
-			cursor = lst->next;
-	return (cursor);
+	del(lst->content);
+	free(lst->next);
+	free(lst->content);
+	free(lst);
 }
