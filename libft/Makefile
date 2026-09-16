@@ -6,7 +6,7 @@
 #   By: rcalzas <rcalzas@student.42madrid.com>       +#+  +:+       +#+        #
 #                                                  +#+#+#+#+#+   +#+           #
 #   Created: 2026/09/11 10:53:49 by rcalzas             #+#    #+#             #
-#   Updated: 2026/09/15 16:16:58 by rcalzas            ###   ########.fr       #
+#   Updated: 2026/09/16 10:26:33 by rcalzas            ###   ########.fr       #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,8 @@ SRC = ft_atoi.c \
 	  ft_putstr_fd.c \
 	  ft_putend_fd.c \
 	  ft_putnbr_fd.c \
+	  ft_lstnew.c \
+	  ft_lstadd_front.c \
 	  
 
 OBJ = $(SRC:.c=.o) 

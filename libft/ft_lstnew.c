@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 23:09:56 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/15 23:37:54 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/16 10:39:12 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ t_list *ft_lstnew(void *content)
 	list = malloc(sizeof(t_list) * 1);
 	if(!list)
 		return (NULL);
-	ft_memcpy(list->content,content);
+	list->content = malloc(sizeof(content)*1);
+	if(!list->content)
+		return (NULL);
+	ft_memcpy(list->content,content,sizeof(content));
 	list->next = NULL;
 	return (list);
 }
