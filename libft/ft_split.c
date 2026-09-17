@@ -6,10 +6,11 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 10:24:05 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/14 10:53:44 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/16 22:48:47 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 /*
 *@brief:checks if a char is on a charset
 *@param:set is the charset to check over

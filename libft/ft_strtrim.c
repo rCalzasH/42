@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 11:19:35 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/14 10:55:32 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/16 22:48:04 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 *@param:set is the charset to check over
 *@return: 1 if c is found on set or 0 if else
 */
-static int	is_in_set(char *set, char c)
+static int	is_in_set(char const *set,  char c)
 {
 	int	found;
 	int i;
@@ -47,14 +47,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = 0;
 	end = ft_strlen(s1);
 	aux = (char *)s1;
-	while (!is_in_set(&aux[strart], c))
+	while (!is_in_set(set, aux[start]))
 		start++;
-	while (!is_in_set(&aux[end], c))
+	while (!is_in_set(set,aux[end] ))
 		end --;
-	while (start < end)
 	trimmed = malloc(end - start * sizeof(char)+1);
 	if(!trimmed)
 		return (NULL);
-	strlcpy(trimmed, &aux[start], end - start)+1;
+	ft_strlcpy(trimmed, &aux[start], end - start+1);
 	return trimmed;
 }

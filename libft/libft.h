@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 10:53:45 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/16 19:58:45 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/17 19:42:48 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,7 @@ unsigned int ft_lstsize(t_list *lst);
 t_list *ft_lstlast(t_list *lst);
 void ft_lstadd_back(t_list **lst, t_list *new);
 void ft_lstdelone(t_list *lst, void (*del)(void *));
+void ft_lstclear(t_list **lst, void (*del)(void *));
+void ft_lstiter(t_list *lst, void (*f)(void *));
+t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 #endif

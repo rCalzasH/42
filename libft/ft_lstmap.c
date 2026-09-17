@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/16 19:58:56 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/16 22:57:52 by rcalzas          ###   ########.fr       */
+/*   Created: 2026/09/17 19:41:50 by rcalzas           #+#    #+#             */
+/*   Updated: 2026/09/17 19:42:53 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void ft_lstdelone(t_list *lst, void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	del(lst->content);
-	free(lst->content);
-	free(lst);
+	t_list *gon;
+	t_list *aux;
+	t_list *auxgon;
+
+	aux = lst;
+	if (!(gon = malloc(sizeof(t_list))))
+		return (0);
+	auxgon = gon;
+	while (aux)
+	{
+		auxgon->content = f(aux->content);
+		if (!(auxgon->next = malloc(sizeof(t_list))))
+			ft_lstclear(&aux, del);
+		aux = aux->next;
+		auxgon = auxgon->next;
+	}
+	return (gon);
 }
