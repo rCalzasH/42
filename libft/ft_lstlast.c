@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/16 10:36:36 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/16 19:49:25 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/18 10:01:57 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 */
 t_list *ft_lstlast(t_list *lst)
 {
-	unsigned int	lst_s;
 	void			*cursor;
 	if (!lst)
 		return (NULL);

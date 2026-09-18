@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 10:52:46 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/11 10:52:47 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/18 09:48:49 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
  *the memory regions thats the source, -n: the number of bytes to copy
  *@return:the destination memory region once its coppied src
  */
-void	*memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 

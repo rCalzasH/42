@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/17 19:41:50 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/17 19:42:53 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/18 09:38:43 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	aux = lst;
 	if (!(gon = malloc(sizeof(t_list))))
-		return (0);
+		return (NULL);
 	auxgon = gon;
 	while (aux)
 	{

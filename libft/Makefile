@@ -6,7 +6,7 @@
 #   By: rcalzas <rcalzas@student.42madrid.com>       +#+  +:+       +#+        #
 #                                                  +#+#+#+#+#+   +#+           #
 #   Created: 2026/09/11 10:53:49 by rcalzas             #+#    #+#             #
-#   Updated: 2026/09/16 10:26:33 by rcalzas            ###   ########.fr       #
+#   Updated: 2026/09/18 10:03:45 by rcalzas            ###   ########.fr       #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,6 @@ SRC = ft_atoi.c \
 	  ft_strjoin.c \
 	  ft_substr.c \
 	  ft_strtrim.c \
-	  ft_split.c \
 	  ft_itoa.c \
 	  ft_strmapi.c \
 	  ft_striteri.c \
@@ -56,6 +55,12 @@ SRC = ft_atoi.c \
 	  ft_putnbr_fd.c \
 	  ft_lstnew.c \
 	  ft_lstadd_front.c \
+	  ft_lstadd_back.c \
+	  ft_lstclear.c \
+	  ft_lstdelone.c \
+	  ft_lstiter.c \
+	  ft_lstlast.c \
+	  ft_lstsize.c \
 	  
 
 OBJ = $(SRC:.c=.o) 
