@@ -1,34 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_params.c                                   :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 15:30:18 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/22 22:31:24 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/22 22:32:33 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
-}
-
-int	ft_strcmp(char *s1, char *s2)
-{
-	int cmp;
-
-	cmp = 0;
-	while ((*s1 || *s2) && !cmp)
-	{
-		cmp = (unsigned char)*s1 - (unsigned char)*s2;
-		s1++;
-		s2++;
-	}
-	return (cmp);
 }
 
 void	ft_putstr(char *str)
@@ -40,44 +25,12 @@ void	ft_putstr(char *str)
 	ft_putchar('\n');
 }
 
-void	ft_swap(char **a, char **b)
-{
-	char *tmp;
-
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
-}
-
-void	ft_bubble_sort(char **argv, int n)
-{
-	int i;
-	int j;
-
-	i = 0;
-	while (i < n - 1)
-	{
-		j = 0;
-		while (j < n - 1 - i)
-		{
-			if (ft_strcmp(argv[j], argv[j + 1]) > 0)
-				ft_swap(&argv[j], &argv[j + 1]);
-			j++;
-		}
-		i++;
-	}
-}
-
 int	main(int argc, char **argv)
 {
 	if (argc <= 1 || !argv)
-		return (0);
-	ft_bubble_sort(argv + 1, argc - 1);
-	argv++;
+		return (-1);
+
 	while (*argv)
-	{
-		ft_putstr(*argv);
-		argv++;
-	}
+		ft_putstr(argv++);
 	return (0);
 }
