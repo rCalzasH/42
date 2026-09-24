@@ -1,38 +1,46 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                          :::      ::::::::   #
-#   makefile                                             :+:      :+:    :+:   #
+#   Makefile                                             :+:      :+:    :+:   #
 #                                                      +:+ +:+         +:+     #
 #   By: rcalzas <rcalzas@student.42madrid.com>       +#+  +:+       +#+        #
 #                                                  +#+#+#+#+#+   +#+           #
-#   Created: 2026/09/23 16:12:47 by rcalzas             #+#    #+#             #
-#   Updated: 2026/09/23 16:12:52 by rcalzas            ###   ########.fr       #
+#   Created: 2026/09/23 15:56:53 by rcalzas             #+#    #+#             #
+#   Updated: 2026/09/23 15:59:52 by rcalzas            ###   ########.fr       #
 #                                                                              #
 # **************************************************************************** #
-NAME = ft_display_file
-
+NAME = libft.a
+ 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-
-SRCS = ft_display_file.c
-OBJS = $(SRCS:.c=.o)
-
+ 
+AR = ar
+ARFLAGS = rcs
+ 
 RM = rm -f
-
+ 
+SRCS = srcs/ft_putchar.c \
+       srcs/ft_putstr.c \
+       srcs/ft_strcmp.c \
+       srcs/ft_strlen.c \
+       srcs/ft_swap.c
+ 
+OBJS = $(SRCS:.c=.o)
+ 
 all: $(NAME)
-
+ 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
-
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
+	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
+ 
+srcs/%.o: srcs/%.c
+	$(CC) $(CFLAGS) -I includes -c $< -o $@
+ 
 clean:
 	$(RM) $(OBJS)
-
+ 
 fclean: clean
 	$(RM) $(NAME)
-
+ 
 re: fclean all
-
+ 
 .PHONY: all clean fclean re

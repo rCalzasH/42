@@ -16,11 +16,9 @@ void	ft_print_numbers(void)
 {
 	char	number;
 
-	i = 0;
 	number = '0';
 	while (number <= '9')
 	{
 		ft_putchar(number++);
 	}
 }
-

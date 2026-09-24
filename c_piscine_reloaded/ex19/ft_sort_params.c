@@ -12,37 +12,44 @@
 
 void	ft_putchar(char c);
 
-void	ft_putstr(char	*str)
+int	ft_strcmp(char *s1, char *s2)
 {
-	if (!str)
-		return ;
-	while (*str)
-		ft_putchar(*(str++));
-	return ;
+	while (*s1 && (*s1 == *s2))
+	{
+		s1++;
+		s2++;
+	}
+	return ((unsigned char)*s1 - (unsigned char)*s2);
 }
 
-void	ft_swap(char **a, char **b)
+void	ft_putstr(char *str)
 {
+	while (*str)
+	{
+		ft_putchar(*str);
+		str++;
+	}
+	ft_putchar('\n');
+}
+
+void	ft_sort_params(int argc, char **argv)
+{
+	int		i;
+	int		j;
 	char	*tmp;
 
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
-}
-
-void	ft_bubble_sort(char **argv, int n)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	while (i < n - 1)
+	i = 1;
+	while (i < argc)
 	{
-		j = 0;
-		while (j < n - 1 - i)
+		j = i + 1;
+		while (j < argc)
 		{
-			if (ft_strcmp(argv[j], argv[j + 1]) > 0)
-				ft_swap(&argv[j], &argv[j + 1]);
+			if (ft_strcmp(argv[i], argv[j]) > 0)
+			{
+				tmp = argv[i];
+				argv[i] = argv[j];
+				argv[j] = tmp;
+			}
 			j++;
 		}
 		i++;
@@ -51,14 +58,17 @@ void	ft_bubble_sort(char **argv, int n)
 
 int	main(int argc, char **argv)
 {
-	if (argc <= 1 || !argv)
-		return (0);
-	ft_bubble_sort(argv + 1, argc - 1);
-	argv++;
-	while (*argv)
+	int	i;
+
+	if (argc > 1)
 	{
-		ft_putstr(*argv);
-		argv++;
+		ft_sort_params(argc, argv);
+		i = 1;
+		while (i < argc)
+		{
+			ft_putstr(argv[i]);
+			i++;
+		}
 	}
 	return (0);
 }

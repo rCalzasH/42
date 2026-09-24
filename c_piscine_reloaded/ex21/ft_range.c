@@ -19,7 +19,7 @@ int	*ft_range(int min, int max)
 
 	if (min >= max)
 		return (NULL);
-	range = malloc((max - min)*sizeof(int));
+	range = malloc((max - min) * sizeof(int));
 	if (!range)
 		return (NULL);
 	i = 0;
