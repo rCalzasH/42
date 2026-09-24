@@ -10,39 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char c);
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-int	ft_strcmp(char *s1, char *s2)
-{
-	int cmp;
-
-	cmp = 0;
-	while ((*s1 || *s2) && !cmp)
-	{
-		cmp = (unsigned char)*s1 - (unsigned char)*s2;
-		s1++;
-		s2++;
-	}
-	return (cmp);
-}
-
-void	ft_putstr(char *str)
+void	ft_putstr(char	*str)
 {
 	if (!str)
 		return ;
 	while (*str)
-		ft_putchar(*str++);
-	ft_putchar('\n');
+		ft_putchar(*(str++));
+	return ;
 }
 
 void	ft_swap(char **a, char **b)
 {
-	char *tmp;
+	char	*tmp;
 
 	tmp = *a;
 	*a = *b;
@@ -51,8 +32,8 @@ void	ft_swap(char **a, char **b)
 
 void	ft_bubble_sort(char **argv, int n)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (i < n - 1)

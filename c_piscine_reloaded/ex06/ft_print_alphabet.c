@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char c);
+
 void	ft_print_alphabet(void)
 {
 	char	letter;
@@ -18,10 +19,10 @@ void	ft_print_alphabet(void)
 
 	i = 0;
 	letter = 'a';
-	while(letter <= 'z')
+	while (letter <= 'z')
 	{
 		letter += i;
-		write(1,&letter, 1);
+		ft_putchar(letter);
 		i++;
 	}
 }

@@ -11,17 +11,19 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
+
 int	*ft_range(int min, int max)
 {
 	int	*range;
 	int	i;
-	if(min >= max)
+
+	if (min >= max)
 		return (NULL);
 	range = malloc(max - min);
-	if(!range)
+	if (!range)
 		return (NULL);
 	i = 0;
-	while(min < max)
+	while (min < max)
 		range[i++] = min++;
 	return (range);
 }

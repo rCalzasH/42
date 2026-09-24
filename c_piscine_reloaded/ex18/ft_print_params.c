@@ -10,26 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
-void	ft_putstr(char *str)
+void	ft_putstr(char	*str)
 {
 	if (!str)
 		return ;
 	while (*str)
-		ft_putchar(*str++);
-	ft_putchar('\n');
+		ft_putchar(*(str++));
+	return ;
 }
 
 int	main(int argc, char **argv)
 {
 	if (argc <= 1 || !argv)
 		return (-1);
-
 	while (*argv)
 		ft_putstr(argv++);
 	return (0);

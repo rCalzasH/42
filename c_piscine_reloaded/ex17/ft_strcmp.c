@@ -10,16 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(char *s1, char *s2)
 {
-    int cmp;
-    
-    cmp = 0;
-    while((*s1 || *s2) && !cmp)
-    {
-        cmp = (unsigned char)*s1 - (unsigned char)*s2;
-        s1++;
-        s2++;
-    }
-    return(cmp);
+	int	cmp;
+
+	cmp = 0;
+	while ((*s1 || *s2) && !cmp)
+	{
+		cmp = (unsigned char)*s1 - (unsigned char)*s2;
+		s1++;
+		s2++;
+	}
+	return (cmp);
 }

@@ -10,16 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_count_if(char **tab, int (*f)(char*))
+int	ft_count_if(char **tab, int (*f)(char*))
 {
 	int	res;
 
 	res = 0;
-	if(!tab)
+	if (!tab)
 		return (res);
-	while(*tab)
+	while (*tab)
 	{
-		if(f(tab++))
+		if (f(tab++))
 			res++;
 	}
 	return (res);
