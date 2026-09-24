@@ -26,7 +26,7 @@ SRC = srcs/ft_putchar.c \
 OBJ = $(SRC:.c=.o) 
 
 #header
-INCLUDE = includes/libft.h
+INCLUDE = includes
 
 AR = ar rcs
 RM = rm -f 

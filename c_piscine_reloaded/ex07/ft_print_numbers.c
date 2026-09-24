@@ -15,14 +15,12 @@ void	ft_putchar(char c);
 void	ft_print_numbers(void)
 {
 	char	number;
-	int		i;
 
 	i = 0;
 	number = '0';
 	while (number <= '9')
 	{
-		number += i;
-		ft_putchar(number);
-		i++;
+		ft_putchar(number++);
 	}
 }
+

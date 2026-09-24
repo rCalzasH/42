@@ -26,6 +26,6 @@ int	main(int argc, char **argv)
 	if (argc <= 1 || !argv)
 		return (-1);
 	while (*argv)
-		ft_putstr(argv++);
+		ft_putstr(*(argv++));
 	return (0);
 }

@@ -9,20 +9,30 @@
 /*   Updated: 2026/09/23 10:33:55 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+int	ft_strlen(char *str)
+{
+	int	i;
 
+	if (!str)
+		return (-1);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
 /*
  *@brief:the string to duplicate
  *@param:the string to coppy
  *@return:a pointer to the first position of the new string
  *or NULL in case of invalid params or malloc failure
  */
-char	*strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	int		size;
 	char	*dup;
 
 	size = ft_strlen(s);
-	dup = ft_calloc(sizeof(char), size);
+	dup = malloc(sizeof(char)*size);
 	if (!dup)
 		return (NULL);
 	ft_strlcpy(dup, s, size - 1);

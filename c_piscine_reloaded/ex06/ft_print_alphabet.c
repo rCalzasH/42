@@ -15,14 +15,10 @@ void	ft_putchar(char c);
 void	ft_print_alphabet(void)
 {
 	char	letter;
-	int		i;
 
-	i = 0;
 	letter = 'a';
 	while (letter <= 'z')
 	{
-		letter += i;
-		ft_putchar(letter);
-		i++;
+		ft_putchar(letter++);
 	}
 }
