@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 10:53:15 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/11 10:53:16 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/25 13:30:45 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
  */
 size_t	ft_strlen(char const *str)
 {
+	size_t	i;
+
 	if (!str)
 		return (-1);
-	size_t i;
-
 	i = 0;
 	while (str[i])
 		i++;

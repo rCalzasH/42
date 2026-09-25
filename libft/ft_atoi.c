@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 10:52:04 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/11 10:52:11 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/25 12:38:17 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ static int	ft_isspace(char c)
  *@return: the number read till un invalid character is found
  *or the number expected
  */
+
 int	ft_atoi(char *number)
 {
 	int	nb;

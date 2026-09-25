@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 10:52:42 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/11 10:52:44 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/25 12:11:34 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@
  */
 int	memcmp(const void *s1, const void *s2, size_t n)
 {
-	int cmp;
-	size_t i;
-	char *str1;
-	char *str2;
+	int		cmp;
+	size_t	i;
+	char	*str1;
+	char	*str2;
 
 	cmp = 0;
 	i = 0;

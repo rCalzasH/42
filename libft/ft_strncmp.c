@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 10:53:19 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/11 10:53:20 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/25 12:19:08 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@
  */
 int	ft_strncmp(char *s1, char *s2, size_t n)
 {
-	int cmp;
-	size_t i;
+	int		cmp;
+	size_t	i;
+
 	if (!s1 || !s2)
 		return (-1);
-
 	i = 0;
 	cmp = 0;
 	while (i < n && !cmp)

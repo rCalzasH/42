@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 12:25:29 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/15 12:27:25 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/25 12:07:43 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 *@return:no return value
 */
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-    ft_putstr_fd(s,fd);
-    write(fd, "\n", 1);
-    return;
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
+	return ;
 }

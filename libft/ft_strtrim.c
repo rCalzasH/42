@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 11:19:35 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/16 22:48:04 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/25 13:51:06 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@
 *@param:set is the charset to check over
 *@return: 1 if c is found on set or 0 if else
 */
-static int	is_in_set(char const *set,  char c)
+static int	is_in_set(char const *set, char c)
 {
 	int	found;
-	int i;
+	int	i;
 
 	i = 0;
 	found = 0;
-	while(set[i] && !found)
+	while (set[i] && !found)
 	{
 		found = set[i] == c;
 		i++;
@@ -39,8 +39,8 @@ static int	is_in_set(char const *set,  char c)
 */
 char	*ft_strtrim(char const *s1, char const *set)
 {
-    char	*trimmed;
-	char	*aux;
+	char		*trimmed;
+	char		*aux;
 	size_t		start;
 	size_t		end;
 
@@ -49,11 +49,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	aux = (char *)s1;
 	while (!is_in_set(set, aux[start]))
 		start++;
-	while (!is_in_set(set,aux[end] ))
-		end --;
-	trimmed = malloc(end - start * sizeof(char)+1);
-	if(!trimmed)
+	while (!is_in_set(set, aux[end]))
+		end--;
+	trimmed = malloc(end - start * sizeof(char) + 1);
+	if (!trimmed)
 		return (NULL);
-	ft_strlcpy(trimmed, &aux[start], end - start+1);
-	return trimmed;
+	ft_strlcpy(trimmed, &aux[start], end - start + 1);
+	return (trimmed);
 }

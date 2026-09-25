@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 10:53:05 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/11 10:53:12 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/25 12:12:42 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
  */
 size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 {
-	size_t dstlen;
-	size_t srclen;
-	size_t i;
+	size_t	dstlen;
+	size_t	srclen;
+	size_t	i;
 
 	dstlen = ft_strlen(dest);
 	srclen = ft_strlen(src);

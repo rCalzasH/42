@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 23:09:56 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/16 10:39:12 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/25 13:44:07 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,18 @@
 *@param:the content to store
 *@return:NULL if malloc failure or the new node
 */
-t_list *ft_lstnew(void *content)
+
+t_list	*ft_lstnew(void *content)
 {
 	t_list	*list;
 
 	list = malloc(sizeof(t_list) * 1);
-	if(!list)
+	if (!list)
 		return (NULL);
-	list->content = malloc(sizeof(content)*1);
-	if(!list->content)
+	list->content = malloc(sizeof(content) * 1);
+	if (!list->content)
 		return (NULL);
-	ft_memcpy(list->content,content,sizeof(content));
+	ft_memcpy(list->content, content, sizeof(content));
 	list->next = NULL;
 	return (list);
 }

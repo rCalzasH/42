@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 10:53:28 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/11 10:53:29 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/25 12:18:26 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,12 @@
  */
 char	*ft_strrchr(char const *s, char c)
 {
+	char	*aux;
+	int		cmp;
+	int		i;
+
 	if (!s || !c)
 		return (NULL);
-
-	char *aux;
-	int cmp;
-	int i;
-
 	cmp = 0;
 	i = ft_strlen(s) - 1;
 	while (i >= 0 && !cmp)

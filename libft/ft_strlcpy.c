@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 10:53:08 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/11 10:53:09 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/25 12:06:36 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
  */
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
-	size_t len;
+	size_t	i;
+	size_t	len;
 
 	len = ft_strlen(src);
 	if (dstsize < 1)

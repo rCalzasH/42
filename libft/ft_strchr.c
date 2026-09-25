@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 10:52:55 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/11 10:52:56 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/25 11:55:57 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
  */
 char	*ft_strchr(const char *s, int c)
 {
-	int	found;
+	int		found;
 	char	*aux;
 
 	aux = (char *)s;

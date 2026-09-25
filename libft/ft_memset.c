@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 10:52:52 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/11 10:52:53 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/25 13:29:58 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@
  */
 void	*ft_memset(void *mem, int x, size_t n)
 {
-	size_t i;
+	size_t	i;
+
 	if (!mem)
 		return (NULL);
 	i = 0;

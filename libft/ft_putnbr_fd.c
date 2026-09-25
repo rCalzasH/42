@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 15:59:46 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/18 09:51:30 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/25 13:41:40 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,21 +22,21 @@ void	ft_putnbr_fd(int n, int fd)
 	char	c;
 
 	number = n;
-	if(number < 0)
+	if (number < 0)
 	{
-		number*=-1;
+		number *= -1;
 		write(fd, "-", 1);
 	}
-	if(number > 9)
+	if (number > 9)
 	{
-		c = (number%10) - '0';
-		return(ft_putnbr_fd(number/10, fd));
+		c = (number % 10) - '0';
+		return (ft_putnbr_fd(number / 10, fd));
 		write(fd, &c, 1);
 	}
 	else
 	{
-		c =  number -'0';
+		c = number - '0';
 		write(fd, &c, 1);
-		return;
+		return ;
 	}
 }

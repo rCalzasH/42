@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 10:52:49 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/11 11:07:59 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/25 13:37:04 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,10 @@
  */
 void	*ft_memmove(void *dest, void *src, int size)
 {
+	int	i;
+
 	if (!dest || !src)
 		return (NULL);
-	int	i;
 	if (dest < src)
 	{
 		i = 0;

@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 10:52:16 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/11 10:52:17 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/25 11:59:55 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
  */
 void	*ft_bzero(void *mem, size_t n)
 {
-	size_t i;
+	size_t	i;
+
 	if (!mem)
 		return (NULL);
 	i = 0;

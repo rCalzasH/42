@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 10:53:22 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/09/11 10:53:23 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/09/25 13:56:49 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
  *to lookfor
  *@return:the adrres qhere needle starts in haystack or haystack if size is 0
  */
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(char *haystack, char *needle, size_t len)
 {
 	size_t	h;
 	size_t	n;
