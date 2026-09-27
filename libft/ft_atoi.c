@@ -12,10 +12,6 @@
 
 #include "libft.h"
 
-static int	ft_isspace(char c)
-{
-	return (c == 32 || (c >= 8 && c <= 13));
-}
 /*
  *@brief: transforms an string into an int value, does not check for
  *overflow or other errors
@@ -24,30 +20,30 @@ static int	ft_isspace(char c)
  *or the number expected
  */
 
-int	ft_atoi(char *number)
+int	ft_atoi(const char *str)
 {
-	int	nb;
-	int	sign_count;
-	int	minus;
+	int	num;
+	int	isneg;
+	int	i;
 
-	sign_count = 0;
-	nb = 0;
-	minus = 1;
-	if (!number)
-		return (nb);
-	while (ft_isspace(*number))
-		number++;
-	while ((*number == '+' || *number == '-') && sign_count < 2)
+	num = 0;
+	isneg = 1;
+	i = 0;
+	while (str[i] && (str[i] == ' ' || str[i] == '\t'
+			|| str[i] == '\n' || str[i] == '\r'
+			|| str[i] == '\v' || str[i] == '\f'))
+		i++;
+	if (str[i] == '+')
+		i++;
+	else if (str[i] == '-')
 	{
-		if (*number == '-')
-			minus *= -1;
-		sign_count++;
-		number++;
+		isneg *= -1;
+		i++;
 	}
-	while (ft_isdigit(*number) && sign_count < 2)
+	while (ft_isdigit(str[i]))
 	{
-		nb = nb * 10 + (*number - 48);
-		number++;
+		num = (num * 10) + (str[i] - '0');
+		i++;
 	}
-	return (nb * minus);
+	return (num * isneg);
 }

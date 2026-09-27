@@ -16,24 +16,24 @@
  *@brief: this function searchs for the first occurence of c in in a string
  *@param: s is the string to search over and c is the char to look for
  *@return: a pointer to the firs occurence or null if c wasnt found on s
- */
-char	*ft_strchr(const char *s, int c)
+*/
+char	*ft_strchr(const char *str, int c)
 {
-	int		found;
-	char	*aux;
+	int				i;
+	unsigned char	ch;
 
-	aux = (char *)s;
-	found = 0;
-	if (!s)
-		return (NULL);
-	if (ft_strlen(s) == 0 || c == '\0')
-		return ((char *)&s[ft_strlen(s)]);
-	while (*aux && !found)
+	i = 0;
+	ch = c;
+	if (ch == '\0')
 	{
-		found = *aux == c;
-		aux++;
+		i = ft_strlen(str);
+		return ((char *)str + i++);
 	}
-	if (!found)
-		return (NULL);
-	return (--aux);
+	while (str[i])
+	{
+		if (str[i] == ch)
+			return ((char *)str + i);
+		i++;
+	}
+	return (NULL);
 }

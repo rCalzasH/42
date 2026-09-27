@@ -17,23 +17,24 @@
  *@param: s is the string to search over and c is the char to look for
  *@return: a pointer to the last occurence or null if c wasnt found on s
  */
-char	*ft_strrchr(char const *s, char c)
-{
-	char	*aux;
-	int		cmp;
-	int		i;
 
-	if (!s)
-		return (NULL);
-	if (ft_strlen(s) == 0 || c == '\0')
-		return ((char *)&s[ft_strlen(s)]);
-	cmp = 1;
-	aux = (char *)s;
-	i = ft_strlen(s) - 1;
-	while (i >= 0 && cmp)
-		cmp = (unsigned char)aux[i--] - (unsigned char)c;
-	if (cmp)
-		return (NULL);
-	else
-		return (&aux[++i]);
+char	*ft_strrchr(const char *str, int c)
+{
+	char			*p;
+	unsigned char	ch;
+	size_t			offset;
+
+	ch = c;
+	offset = ft_strlen(str);
+	p = (char *)str + offset;
+	if (ch == '\0')
+		return (p++);
+	while (p >= str)
+	{
+		if (*p == ch)
+			return (p);
+		p--;
+	}
+	p = NULL;
+	return (p);
 }

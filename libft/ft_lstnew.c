@@ -22,13 +22,10 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*list;
 
-	list = malloc(sizeof(t_list) * 1);
+	list = malloc(sizeof(t_list));
 	if (!list)
 		return (NULL);
-	list->content = malloc(sizeof(content) * 1);
-	if (!list->content)
-		return (NULL);
-	ft_memcpy(list->content, content, sizeof(content));
+	list->content = content;
 	list->next = NULL;
 	return (list);
 }

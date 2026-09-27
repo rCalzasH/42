@@ -21,7 +21,7 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-int				ft_atoi(char *number);
+int				ft_atoi(char const *number);
 void			*ft_bzero(void *mem, size_t n);
 void			*ft_calloc(size_t n, size_t size);
 int				ft_isalpha(int c);
@@ -39,8 +39,8 @@ char			*ft_strdup(const char *s);
 size_t			ft_strlcat(char *dest, const char *src, size_t dstsize);
 size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t			ft_strlen(char const *str);
-int				ft_strncmp(char *s1, char *s2, size_t n);
-char			*ft_strrchr(const char *s, char c);
+int				ft_strncmp(char const *s1, char const *s2, size_t n);
+char			*ft_strrchr(const char *s, int c);
 int				ft_toupper(int param);
 int				ft_tolower(int param);
 char			*ft_strnstr(char *haystack, char *needle, size_t len);

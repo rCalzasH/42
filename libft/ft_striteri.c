@@ -21,21 +21,15 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
 	size_t			s_size;
-	char			*done;
 
 	if (!f || !s)
 		return ;
 	s_size = ft_strlen(s);
 	i = 0;
-	done = malloc(sizeof(char) * s_size + 1);
-	if (!done)
-		return ;
-	ft_memcpy(done, s, s_size + 1);
 	while (i < s_size)
 	{
-		f(i, &done[i]);
+		f(i, &s[i]);
 		i++;
 	}
-	done[i] = '\0';
 	return ;
 }

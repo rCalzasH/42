@@ -19,19 +19,21 @@
  *and n, the number of bytes to compare
  *@return: 0 if s1 is equal to s2 in the n bytes compared, or the difference
  */
-int	ft_strncmp(char *s1, char *s2, size_t n)
-{
-	int		cmp;
-	size_t	i;
 
-	if (!s1 || !s2)
-		return (-1);
+int	ft_strncmp(const char *str1, const char *str2, size_t n)
+{
+	unsigned char	*s1;
+	unsigned char	*s2;
+	size_t			i;
+
+	s1 = (unsigned char *)str1;
+	s2 = (unsigned char *)str2;
 	i = 0;
-	cmp = 0;
-	while (i < n && !cmp)
+	while ((s1[i] || s2[i]) && i < n)
 	{
-		cmp = (unsigned char)s1[i] - (unsigned char)s2[i];
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
 		i++;
 	}
-	return (cmp);
+	return (0);
 }

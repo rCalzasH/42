@@ -17,7 +17,15 @@
 *return:
 */
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **alst, t_list *new)
 {
-	ft_memcpy(*lst, new, sizeof(t_list));
+	if (!new)
+		return ;
+	if (!*alst)
+	{
+		*alst = new;
+		return ;
+	}
+	new->next = *alst;
+	*alst = new;
 }

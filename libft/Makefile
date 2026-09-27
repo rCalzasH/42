@@ -61,6 +61,8 @@ SRC = ft_atoi.c \
 	  ft_lstiter.c \
 	  ft_lstlast.c \
 	  ft_lstsize.c \
+	  ft_split.c \
+	  ft_lstmap.c
 	  
 
 OBJ = $(SRC:.c=.o) 

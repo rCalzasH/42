@@ -19,15 +19,13 @@
 
 unsigned int	ft_lstsize(t_list *lst)
 {
-	void			*cursor;
-	unsigned int	size;
+	unsigned int	i;
 
-	size = 1;
-	cursor = lst->next;
-	while (cursor)
+	i = 0;
+	while (lst)
 	{
-		cursor = lst->next;
-		size++;
+		lst = lst->next;
+		i++;
 	}
-	return (size);
+	return (i);
 }

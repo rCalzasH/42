@@ -16,6 +16,7 @@
 *@param:the integer n, and the filedescriptor fd
 *@return:no return value
 */
+
 void	ft_putnbr_fd(int n, int fd)
 {
 	long	number;
@@ -24,19 +25,13 @@ void	ft_putnbr_fd(int n, int fd)
 	number = n;
 	if (number < 0)
 	{
-		number *= -1;
-		write(fd, "-", 1);
+		ft_putchar_fd('-', fd);
+		number = -number;
 	}
 	if (number > 9)
 	{
-		c = (number % 10) - 48;
-		write(fd, &c, 1);
-		return (ft_putnbr_fd(number / 10, fd));
+		ft_putnbr_fd(number / 10, fd);
 	}
-	else
-	{
-		c = number - 48;
-		write(fd, &c, 1);
-		return ;
-	}
+	c = (number % 10) + '0';
+	ft_putchar_fd(c, fd);
 }
