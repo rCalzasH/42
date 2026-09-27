@@ -24,8 +24,10 @@ char	*ft_strchr(const char *s, int c)
 
 	aux = (char *)s;
 	found = 0;
-	if (!s || !c)
+	if (!s)
 		return (NULL);
+	if (ft_strlen(s) == 0 || c == '\0')
+		return ((char *)&s[ft_strlen(s)]);
 	while (*aux && !found)
 	{
 		found = *aux == c;
@@ -33,5 +35,5 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (!found)
 		return (NULL);
-	return (aux);
+	return (--aux);
 }

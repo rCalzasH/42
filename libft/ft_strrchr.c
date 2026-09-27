@@ -23,17 +23,17 @@ char	*ft_strrchr(char const *s, char c)
 	int		cmp;
 	int		i;
 
-	if (!s || !c)
+	if (!s)
 		return (NULL);
-	cmp = 0;
+	if (ft_strlen(s) == 0 || c == '\0')
+		return ((char *)&s[ft_strlen(s)]);
+	cmp = 1;
+	aux = (char *)s;
 	i = ft_strlen(s) - 1;
-	while (i >= 0 && !cmp)
-	{
-		cmp = (unsigned char)*aux - (unsigned char)c;
-		aux++;
-	}
-	if (!cmp)
+	while (i >= 0 && cmp)
+		cmp = (unsigned char)aux[i--] - (unsigned char)c;
+	if (cmp)
 		return (NULL);
 	else
-		return (aux);
+		return (&aux[++i]);
 }

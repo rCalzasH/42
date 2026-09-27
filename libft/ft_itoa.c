@@ -17,6 +17,7 @@ size_t	count_c(int n)
 	size_t	num_c;
 	int		flag_neg;
 
+	num_c = 0;
 	flag_neg = n < 0;
 	while (n / 10 != 0)
 		num_c++;

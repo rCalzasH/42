@@ -20,7 +20,7 @@
  *@return: -1 if not valid params, 0 if equals, or the difference bewtween s1,
 	and s2
  */
-int	memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	int		cmp;
 	size_t	i;

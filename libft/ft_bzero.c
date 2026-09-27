@@ -25,9 +25,6 @@ void	*ft_bzero(void *mem, size_t n)
 		return (NULL);
 	i = 0;
 	while (i < n)
-	{
-		((char *)mem)[i] = '0';
-		i++;
-	}
+		((char *)mem)[i++] = 0;
 	return (mem);
 }

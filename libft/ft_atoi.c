@@ -14,7 +14,7 @@
 
 static int	ft_isspace(char c)
 {
-	return (c == 20 || (c >= 8 && c <= 13));
+	return (c == 32 || (c >= 8 && c <= 13));
 }
 /*
  *@brief: transforms an string into an int value, does not check for
@@ -44,10 +44,10 @@ int	ft_atoi(char *number)
 		sign_count++;
 		number++;
 	}
-	while (ft_isdigit(*number))
+	while (ft_isdigit(*number) && sign_count < 2)
 	{
 		nb = nb * 10 + (*number - 48);
 		number++;
 	}
-	return (nb);
+	return (nb * minus);
 }

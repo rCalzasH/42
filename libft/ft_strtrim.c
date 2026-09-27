@@ -51,9 +51,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start++;
 	while (!is_in_set(set, aux[end]))
 		end--;
-	trimmed = malloc(end - start * sizeof(char) + 1);
+	trimmed = malloc(end - start + 1 * sizeof(char));
 	if (!trimmed)
 		return (NULL);
-	ft_strlcpy(trimmed, &aux[start], end - start + 1);
+	start -= 2;
+	ft_strlcpy(trimmed, &aux[start], (end - start + 1));
 	return (trimmed);
 }

@@ -30,6 +30,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	aux = (char *)s;
 	aux += start;
-	ft_strlcpy(substr, aux, len);
+	ft_strlcpy(substr, aux, len + 1);
 	return (substr);
 }

@@ -35,7 +35,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		aux++;
 	}
 	if (cmp)
-		return (aux);
+		return (--aux);
 	else
 		return (NULL);
 }
