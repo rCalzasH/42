@@ -19,42 +19,35 @@
 */
 static int	is_in_set(char const *set, char c)
 {
-	int	found;
 	int	i;
 
 	i = 0;
-	found = 0;
-	while (set[i] && !found)
+	while (set[i])
 	{
-		found = set[i] == c;
+		if (set[i] == c)
+			return (1);
 		i++;
 	}
-	return (found);
+	return (0);
 }
 
-/*
-*@brief:returns a "copy" of s1 without the chars in set
-*@param:s1 is the string to trim and set is the charset to remove
-*@return:the new string trimmed or NULL if malloc failure
-*/
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char		*trimmed;
-	char		*aux;
-	size_t		start;
-	size_t		end;
+	char	*trimmed;
+	size_t	start;
+	size_t	end;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = 0;
-	end = ft_strlen(s1);
-	aux = (char *)s1;
-	while (!is_in_set(set, aux[start]))
+	while (s1[start] && is_in_set(set, s1[start]))
 		start++;
-	while (!is_in_set(set, aux[end]))
+	end = ft_strlen(s1);
+	while (end > start && is_in_set(set, s1[end - 1]))
 		end--;
-	trimmed = malloc(end - start + 1 * sizeof(char));
+	trimmed = malloc(sizeof(char) * (end - start + 1));
 	if (!trimmed)
 		return (NULL);
-	start -= 2;
-	ft_strlcpy(trimmed, &aux[start], (end - start + 1));
+	ft_strlcpy(trimmed, &s1[start], end - start + 1);
 	return (trimmed);
 }

@@ -31,6 +31,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	aux_s1 = (char *)s1;
 	aux_s2 = (char *)s2;
 	joint = ft_calloc(size, sizeof(char));
+	if (!joint)
+		return (NULL);
 	ft_strlcat(joint, aux_s1, size);
 	ft_strlcat(joint, aux_s2, size);
 	return (joint);

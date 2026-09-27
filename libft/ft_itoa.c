@@ -15,14 +15,22 @@
 size_t	count_c(int n)
 {
 	size_t	num_c;
-	int		flag_neg;
+	long	nb;
 
 	num_c = 0;
-	flag_neg = n < 0;
-	while (n / 10 != 0)
+	nb = n;
+	if (nb <= 0)
+	{
 		num_c++;
-	if (flag_neg)
+		nb = -nb;
+	}
+	if (n == 0)
+		return (1);
+	while (nb > 0)
+	{
 		num_c++;
+		nb /= 10;
+	}
 	return (num_c);
 }
 
@@ -34,19 +42,21 @@ char	*ft_itoa(int n)
 
 	number = n;
 	c = count_c(n);
-	num = malloc(sizeof(char) * c + 1);
+	num = malloc(sizeof(char) * (c + 1));
 	if (!num)
 		return (NULL);
-	if (n < 0)
+	num[c--] = '\0';
+	if (number == 0)
+		num[0] = '0';
+	if (number < 0)
 	{
-		number *= -1;
 		num[0] = '-';
+		number = -number;
 	}
-	num[c] = 0;
-	while (--c)
+	while (number > 0)
 	{
-		num[c] = (number % 10) + '0';
-		number = number / 10;
+		num[c--] = (number % 10) + '0';
+		number /= 10;
 	}
 	return (num);
 }

@@ -19,7 +19,7 @@
  *@return: the parameter converted if was neccesary or the same if not
  */
 
-int	ft_topupper(int param)
+int	ft_tolower(int param)
 {
 	if (param >= 65 && param <= 90)
 		param += 32;

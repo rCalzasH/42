@@ -29,13 +29,13 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (number > 9)
 	{
-		c = (number % 10) - '0';
-		return (ft_putnbr_fd(number / 10, fd));
+		c = (number % 10) - 48;
 		write(fd, &c, 1);
+		return (ft_putnbr_fd(number / 10, fd));
 	}
 	else
 	{
-		c = number - '0';
+		c = number - 48;
 		write(fd, &c, 1);
 		return ;
 	}

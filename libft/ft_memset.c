@@ -22,8 +22,6 @@ void	*ft_memset(void *mem, int x, size_t n)
 {
 	size_t	i;
 
-	if (!mem)
-		return (NULL);
 	i = 0;
 	while (((char *)mem)[i] && i < n)
 	{

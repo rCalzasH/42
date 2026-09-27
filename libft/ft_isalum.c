@@ -17,7 +17,7 @@
  *@param: the character to check
  *@return: 1 if the charater is alphanumeric or 0 if else
  */
-int	ft_isalum(char c)
+int	ft_isalnum(int c)
 {
 	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0'
 			&& c <= '9'));
