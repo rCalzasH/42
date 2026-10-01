@@ -32,11 +32,11 @@ char	*ft_strnstr(char *haystack, char *needle, size_t len)
 		while (haystack[h + n] == needle[n] && (h + n) < len)
 		{
 			if (haystack[h + n] == '\0' && needle[n] == '\0')
-				return ((char *)(haystack) + h);
+				return ((char *)(--haystack) + h + 1);
 			n++;
 		}
 		if (needle[n] == '\0')
-			return ((char *)(haystack) + h);
+			return ((char *)(--haystack) + h + 1);
 		h++;
 	}
 	return (0);
