@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 23:41:15 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/10/04 13:18:22 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/10/05 12:18:53 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,7 @@ int	ft_choose_format(char c, va_list l)
 int ft_printf(char *format, ...)
 {
 	int	index;
-	int	return_value;else if(c == 'u')
-		return;
+	int	return_value;
 	va_list	list;
 
 	va_start(list);
