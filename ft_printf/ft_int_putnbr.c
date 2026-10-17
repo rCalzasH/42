@@ -6,7 +6,11 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 12:12:10 by rcalzas           #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2026/10/08 10:58:09 by rcalzas          ###   ########.fr       */
+=======
+/*   Updated: 2026/10/14 12:38:03 by rcalzas          ###   ########.fr       */
+>>>>>>> 3de3fb6f4eea72a78e36aac487086d0f931fa71a
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +37,7 @@ int	ft_int_putnbr(int n, int rv)
 	}
 	c = (number % 10) + '0';
 	ft_int_putchar(c);
+<<<<<<< HEAD
 	return (++ret_value);
 }
 
@@ -40,4 +45,7 @@ int	ft_int_putnbr(int n, int rv)
 int main()
 {
 	printf("\n%d\n", ft_int_putnbr(45, 0));
+=======
+	return (++ret_value)
+>>>>>>> 3de3fb6f4eea72a78e36aac487086d0f931fa71a
 }
