@@ -6,28 +6,28 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 23:41:15 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/10/14 12:58:11 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/10/17 14:09:20 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_printf.h>
 
-int	ft_choose_format(char c, va_list l)
+int	ft_choose_format(char c, va_list list)
 {
 	if(c == 'c')
-		return(ft_int_putchar(va_arag(list, char)));
+		return(ft_int_putchar(va_arg(list, char)));
 	else if(c == 'd' || c == 'i')
-		return(ft_int_putnbr(va_arg(list, int)));
+		return(ft_int_putnbr_base(va_arg(list, int), "0123456789", 0));
 	else if(c == 's')
-		return(ft_int_putstr(va_list(list, char *)));
+		return(ft_int_putstr(va_arg(list, char *)));
 	else if(c == 'p')
-		return (ft_int_putptr(list, ));
+		return (ft_int_putptr(va_arg(list, uintptr_t)));
 	else if(c == 'X')
-		return();
+		return(ft_int_putnbr_base(va_arg(list, int), "0123456789ABCDEF"), 0);
 	else if(c == 'x')
-		return();
+		return(ft_int_putnbr_base(va_arg(list, int), "0123456789abcdef"), 0);
 	else if(c == 'u')
-		return;
+		return(ft_int_putnbr_base(va_arg(list, unsigned int), "0123456789", 0));
 	else if(c == '%')
 		return ft_int_putchar('%');
 	else 
@@ -52,4 +52,10 @@ int ft_printf(char *format, ...)
 	}
 	va_end(list);
 	return return_value;
+}
+
+int main()
+{
+	char *hello_world = "Hello world";
+	ft_printf("%s\n", hello_world);
 }

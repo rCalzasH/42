@@ -5,30 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/01 21:20:11 by rcalzas           #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2026/10/08 10:59:12 by rcalzas          ###   ########.fr       */
-=======
-/*   Updated: 2026/10/14 12:43:39 by rcalzas          ###   ########.fr       */
->>>>>>> 3de3fb6f4eea72a78e36aac487086d0f931fa71a
+/*   Created: 2026/10/17 11:22:24 by rcalzas           #+#    #+#             */
+/*   Updated: 2026/10/17 14:29:30 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 # include <unistd.h>
 # include <stdarg.h>
-<<<<<<< HEAD
+# include <stdint.h>
 
-=======
->>>>>>> 3de3fb6f4eea72a78e36aac487086d0f931fa71a
+void	ft_put_ptr(uintptr_t num);
 int ft_printf(char *format, ...);
 int	ft_choose_format(char c, va_list l);
-int	ft_int_putnbr(int n, int rv);
+int	ft_int_putnbr_base(int n,char *base, int rv);
 int	ft_int_putchar(char c);
-<<<<<<< HEAD
-=======
 int	ft_int_putstr(char *str);
->>>>>>> 3de3fb6f4eea72a78e36aac487086d0f931fa71a
+int	ft_print_ptr(uintptr_t ptr);
+
+
 
 #endif
