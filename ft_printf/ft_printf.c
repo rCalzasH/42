@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 23:41:15 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/10/18 11:46:49 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/10/18 11:53:35 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_choose_format(char c, va_list list)
 	if (c == 'c')
 		return (ft_int_putchar(va_arg(list, int)));
 	else if (c == 'd' || c == 'i')
-		return (ft_int_putnbr_base(va_arg(list, long), "0123456789", 0));
+		return (ft_int_putnbr_base(va_arg(list, int), "0123456789", 0));
 	else if (c == 's')
 		return (ft_int_putstr(va_arg(list, char *)));
 	else if (c == 'p')
