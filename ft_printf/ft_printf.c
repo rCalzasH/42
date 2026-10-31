@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 23:41:15 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/10/18 11:53:35 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/10/31 11:34:12 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ int	ft_printf(char *format, ...)
 	int		return_value;
 	va_list	list;
 
+	if (!format)
+		return (0);
 	va_start(list, format);
 	return_value = 0;
 	index = 0;
@@ -57,11 +59,33 @@ int	ft_printf(char *format, ...)
 	va_end(list);
 	return (return_value);
 }
-//#include <stdio.h>
-////int main  (void)
-////{
-////	ft_printf("%s", NULL);
-////	ft_printf("%%%%%%%%%%");
-////	ft_printf("%d", 7348784378);
-////	printf("%d",7348784378);
-//}
+/*
+#include <stdio.h>
+int main  (void)
+{
+	int num = 62536;
+	void *ptr = &num;
+	//strs
+	ft_printf("%s", "Hola Caracola\n");
+	printf("%s", "Hola Caracola\n");
+	ft_printf("%s", NULL);
+	printf("%s", NULL);
+	//
+	ft_printf("%d\n",num);
+	printf("%d\n",num);
+	//
+	ft_printf("%x\n",num);
+	printf("%x\n",num);
+	//
+	ft_printf("%X\n",num);
+	printf("%X\n",num);
+	//
+	ft_printf("%p\n",ptr);
+	printf("%p\n",ptr);
+	//
+	ft_printf("%p\n",NULL);
+	printf("%p\n",NULL);
+	return (0);
+
+}
+	*/

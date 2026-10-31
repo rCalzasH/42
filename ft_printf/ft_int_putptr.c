@@ -46,13 +46,11 @@ int	ft_print_ptr(uintptr_t ptr)
 	int	lenght;
 
 	lenght = 0;
-	lenght += write(1, "0x", 2);
 	if (ptr == 0)
-		lenght += write(1, "0", 1);
-	else
-	{
-		ft_put_ptr(ptr);
-		lenght += ft_ptr_len(ptr);
-	}
+		return(ft_int_putstr("(nil)"));
+	lenght += write(1, "0x", 2);
+	ft_put_ptr(ptr);
+	lenght += ft_ptr_len(ptr);
 	return (lenght);
 }
+
