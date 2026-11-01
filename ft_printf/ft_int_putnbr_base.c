@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 11:06:39 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/10/18 11:22:57 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/11/01 14:45:49 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ static unsigned int	ft_strlen(char *str)
 	return (i);
 }
 
-int	ft_int_putnbr_base(long nbr, char *base, int rv)
+int	ft_int_putnbr_base(long long nbr, char *base, int rv)
 {
-	unsigned long	num;
-	char			digit;
-	unsigned int	base_len;
+	unsigned long long	num;
+	char				digit;
+	unsigned int		base_len;
 
 	base_len = ft_strlen(base);
 	if (nbr < 0)
