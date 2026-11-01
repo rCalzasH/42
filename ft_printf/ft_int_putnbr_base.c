@@ -6,13 +6,12 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 11:06:39 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/10/18 11:22:57 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/10/30 14:10:00 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-#include "ft_printf.h"
 
 static unsigned int	ft_strlen(char *str)
 {
