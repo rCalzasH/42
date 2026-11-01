@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 23:41:15 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/11/01 14:43:44 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/11/01 16:41:13 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ int	ft_choose_format(char c, va_list list)
 	else if (c == 'p')
 		return (ft_print_ptr(va_arg(list, uintptr_t)));
 	else if (c == 'X')
-		return (ft_int_putnbr_base(va_arg(list, unsigned long long),
+		return (ft_int_convert_hex(va_arg(list, unsigned long long),
 				"0123456789ABCDEF", 0));
 	else if (c == 'x')
-		return (ft_int_putnbr_base(va_arg(list, unsigned long long),
+		return (ft_int_convert_hex(va_arg(list, unsigned long long),
 				"0123456789abcdef", 0));
 	else if (c == 'u')
 		return (ft_int_putnbr_base(va_arg(list, unsigned int),
@@ -60,46 +60,49 @@ int	ft_printf(char const *format, ...)
 	return (return_value);
 }
 
-//#include <stdio.h>
-//int main  (void)
-//{
-//	int num = 62536;
-//	void *ptr = &num;
-//	//strs
-//	ft_printf("%s", "Hola Caracola\n");
-//	printf("%s", "Hola Caracola\n");
-//	//
-//	ft_printf("%d\n",num);
-//	printf("%d\n",num);
-//	//
-//	ft_printf("%x\n",num);
-//	printf("%x\n",num);
-//	//
-//	ft_printf("%X\n",num);
-//	printf("%X\n",num);
-//	//
-//	ft_printf("%p\n",ptr);
-//	printf("%p\n",ptr);
-//	//
-//	ft_printf("%p\n",NULL);
-//	printf("%p\n",NULL);
-//	//
-//	ft_printf("%u", LONG_MAX);
-//	printf("%u", LONG_MAX);
-//	//
-//	ft_printf("%u", LONG_MIN);
-//	printf("%u", LONG_MIN);
-//	//
-//	ft_printf("%u", ULONG_MAX);
-//	printf("%u", ULONG_MAX);
-//	//
-//	ft_printf("%u", 9223372036854775807LL);
-//	printf("%u", 9223372036854775807LL);
-//	//
-//	ft_printf("%u %u %u %u %u %u %u", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
-//	printf("%u %u %u %u %u %u %u", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
-//	//
-//
-//	return (0);
-//
-//}
+#include <limits.h>
+#include <stdio.h>
+int main  (void)
+{
+	//int num = 62536;
+	//void *ptr = &num;
+	////strs
+	//ft_printf("%s", "Hola Caracola\n");
+	//printf("%s", "Hola Caracola\n");
+	////
+	//ft_printf("%d\n",num);
+	//printf("%d\n",num);
+	////
+	//ft_printf("%x\n",num);
+	//printf("%x\n",num);
+	////
+	//ft_printf("%X\n",num);
+	//printf("%X\n",num);
+	////
+	//ft_printf("%p\n",ptr);
+	//printf("%p\n",ptr);
+	////
+	//ft_printf("%p\n",NULL);
+	//printf("%p\n",NULL);
+	//
+	ft_printf("%x\n", LONG_MAX);
+	printf("%x\n", LONG_MAX);
+	//
+	ft_printf("%x\n", LONG_MIN);
+	printf("%x\n", LONG_MIN);
+	//
+	ft_printf("%x\n", ULONG_MAX);
+	printf("%x\n", ULONG_MAX);
+	//
+	ft_printf("%x\n", 9223372036854775807LL);
+	printf("%x\n", 9223372036854775807LL);
+	//
+	ft_printf("%u %u %u %u %u %u %u\n", 
+ INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+	printf("%u %u %u %u %u %u %u", 
+ INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+	//
+
+	return (0);
+
+}

@@ -6,11 +6,9 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 11:06:39 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/11/01 14:45:49 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/11/01 16:24:39 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "ft_printf.h"
 
 #include "ft_printf.h"
 
