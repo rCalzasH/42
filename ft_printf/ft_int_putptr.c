@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 11:08:39 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/10/18 11:17:22 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/11/01 14:18:19 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,10 @@ int	ft_print_ptr(uintptr_t ptr)
 	int	lenght;
 
 	lenght = 0;
-	lenght += write(1, "0x", 2);
 	if (ptr == 0)
-		lenght += write(1, "0", 1);
-	else
-	{
-		ft_put_ptr(ptr);
-		lenght += ft_ptr_len(ptr);
-	}
+		return (ft_int_putstr("(nil)"));
+	lenght += write(1, "0x", 2);
+	ft_put_ptr(ptr);
+	lenght += ft_ptr_len(ptr);
 	return (lenght);
 }

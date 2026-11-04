@@ -6,21 +6,10 @@
 #   By: rcalzas <rcalzas@student.42madrid.com>       +#+  +:+       +#+        #
 #                                                  +#+#+#+#+#+   +#+           #
 #   Created: 2026/09/11 10:53:49 by rcalzas             #+#    #+#             #
-#   Updated: 2026/10/18 11:02:37 by rcalzas            ###   ########.fr       #
+#   Updated: 2026/11/01 16:29:05 by rcalzas            ###   ########.fr       #
 #                                                                              #
 # **************************************************************************** #
 
-# **************************************************************************** #
-#                                                                              #
-#                                                          :::      ::::::::   #
-#   Makefile                                             :+:      :+:    :+:   #
-#                                                      +:+ +:+         +:+     #
-#   By: rcalzas <rcalzas@student.42madrid.com>       +#+  +:+       +#+        #
-#                                                  +#+#+#+#+#+   +#+           #
-#   Created: 2026/09/11 10:53:49 by rcalzas             #+#    #+#             #
-#   Updated: 2026/10/18 11:01:30 by rcalzas            ###   ########.fr       #
-#                                                                              #
-# **************************************************************************** #
 
 # Name of library
 NAME = libftprintf.a
@@ -33,7 +22,8 @@ SRC = ft_printf.c \
 	  ft_int_putnbr_base.c \
 	  ft_int_putchar.c \
 	  ft_int_putstr.c \
-	  ft_int_putptr.c
+	  ft_int_putptr.c \
+	  ft_int_convert_hex.c
 
 OBJ = $(SRC:.c=.o) 
 
