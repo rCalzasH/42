@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 23:36:40 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/11/05 00:02:02 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/11/05 12:23:39 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,19 @@
 char *get_next_line(int fd)
 {
 	static char *stash;
-	char buffer[BUFFER_SIZE];// buffer to read over
+	char *buffer;// buffer to read over
 	char *output;
 	size_t bytes_read;
+
 	if(fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	while(read(fd, ))
+	buffer = malloc((BUFFER_SIZE + 1),sizeof(char));
+	if(!buffer)
+		return (NULL);
+	buffer[BUFFER_SIZE] = '\0';
+	while(!ft_strchr('\n', buffer) && bytes_read > 0)
 	{
-
+		bytes_read =  read(fd, buffer, BUFFER_SIZE);
+		
 	}
 }
