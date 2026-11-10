@@ -6,12 +6,12 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 23:36:40 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/11/05 12:23:39 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/11/09 12:09:49 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-/*my buffer cant be static cause it could overflow the stack?? WTTF*/
+/*my buffer cant be an array cause it could overflow the stack?? WTTF*/
 char *get_next_line(int fd)
 {
 	static char *stash;
@@ -30,4 +30,8 @@ char *get_next_line(int fd)
 		bytes_read =  read(fd, buffer, BUFFER_SIZE);
 		
 	}
+}
+void	free_mem()
+{
+
 }
