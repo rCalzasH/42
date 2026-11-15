@@ -11,20 +11,16 @@
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-/*this is got from the libft, so must be correct*/
 
 char	*ft_strchr(const char *str, int c)
 {
-	int				i;
+	size_t			i;
 	unsigned char	ch;
 
 	i = 0;
 	ch = c;
 	if (ch == '\0')
-	{
-		i = ft_strlen(str);
-		return ((char *)str + i++);
-	}
+		return ((char *)str + ft_strlen(str));
 	while (str[i])
 	{
 		if (str[i] == ch)
@@ -49,6 +45,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	joint = malloc(size * sizeof(char));
 	if (!joint)
 		return (NULL);
+	joint[0] = '\0';
 	ft_strlcat(joint, aux_s1, size);
 	ft_strlcat(joint, aux_s2, size);
 	return (joint);
@@ -87,4 +84,23 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 	}
 	dest[dstlen] = '\0';
 	return (srclen);
+}
+char	*ft_substr(char const *s, size_t start, size_t len)
+{
+	char	*sub;
+	size_t	i;
+
+	if (!s || start > ft_strlen(s))
+		return (NULL);
+	sub = malloc(len + 1);
+	if (!sub)
+		return (NULL);
+	i = 0;
+	while (i < len && s[start + i])
+	{
+		sub[i] = s[start + i];
+		i++;
+	}
+	sub[i] = '\0';
+	return (sub);
 }
