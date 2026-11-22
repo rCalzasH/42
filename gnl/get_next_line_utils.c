@@ -6,7 +6,7 @@
 /*   By: rcalzas <rcalzas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 12:21:52 by rcalzas           #+#    #+#             */
-/*   Updated: 2026/11/17 16:19:14 by rcalzas          ###   ########.fr       */
+/*   Updated: 2026/11/22 17:11:43 by rcalzas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 	dest[dstlen] = '\0';
 	return (srclen);
 }
+
 char	*ft_substr(char const *s, size_t start, size_t len)
 {
 	char	*sub;
